@@ -1,5 +1,5 @@
 USERNAME	=knakto
-HOST		=nixos
+HOST		=knakto
 
 NIX_FLAGS	= --extra-experimental-features "nix-command flakes"
 NIXOS_FLAGS	= --cores 6
@@ -27,4 +27,4 @@ boot:
 home:
 	home-manager $(HOME_FLAGS) switch --flake .
 
-PHONY: all lock update test switch boot home
+.PHONY: all lock update test switch boot home
