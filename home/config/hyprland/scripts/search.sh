@@ -7,6 +7,8 @@ declare -A BOOKMARKS=(
     ["gh"]="https://github.com/"
     ["wk"]="https://en.wikipedia.org/wiki/"
     ["map"]="https://maps.google.com/"
+	["gm"]="https://gemini.google.com"
+	["c"]="https://chatgpt.com/"
     # Add more bookmarks here: ["name"]="url_or_domain"
 )
 
