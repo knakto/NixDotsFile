@@ -26,6 +26,7 @@
     ./config/git
     ./config/fastfetch
     ./config/hyprland
+    ./config/zen
   ];
   home = {
     username = "knakto";
