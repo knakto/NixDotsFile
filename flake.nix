@@ -6,6 +6,13 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nix-software-center.url = "github:snowfallorg/nix-software-center";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,12 +33,12 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
-    lib = nixpkgs.lib;
+    inherit (nixpkgs) lib;
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in {
     homeConfigurations = {
       knakto = inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = pkgs;
+        inherit pkgs;
         extraSpecialArgs = {inherit self inputs outputs;};
         modules = [
           ./home/home.nix
