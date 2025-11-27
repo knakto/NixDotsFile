@@ -56,5 +56,6 @@
     pnpm
     # imagemagick
     steam
+    minecraft
   ];
 }
