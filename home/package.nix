@@ -56,6 +56,7 @@
     pnpm
     # imagemagick
     steam
-    minecraft
+    # minecraft
+    hmcl
   ];
 }
